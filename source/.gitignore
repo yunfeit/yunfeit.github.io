@@ -1,0 +1,7 @@
+.idea
+node_modules
+dest
+bin
+index.html
+build
+package-lock.json
