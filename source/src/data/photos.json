@@ -34,5 +34,9 @@
     {
         "thumb": "data/img/9.jpg",
         "img": "data/img/9.jpg"
+    },
+    {
+        "thumb": "data/img/10.jpg",
+        "img": "data/img/10.jpg"
     }
 ]
