@@ -89,15 +89,9 @@ gulp.task('font', function () {
         .pipe(gulp.dest(destAssets + 'css/font/'));
 });
 
-//数据文件
-gulp.task('data', function () {
-    return gulp.src(src + 'data/**')
-        .pipe(gulp.dest(dest + 'data/'));
-});
 
 // 默认任务
 gulp.task('default', [
-    'data',
     'html',
     'js',
     'font',

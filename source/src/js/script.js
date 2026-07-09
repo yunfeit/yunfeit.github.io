@@ -19,19 +19,11 @@ $(function () {
         pauseOnWindowBlur: false,
         downloadPage: null
     });
-
-    $.ajax({
-        type: 'GET',
-        url: 'data/photos.json',
-        dataType: 'json',
-        success: function (data) {
-            var div = $("#photos ul");
-            for (var i in data) {
-                var li = '<li><a href="' + data[i].img + '" rel="lightbox"><img src="' + data[i].thumb + '"></a></li>';
-                div.append(li);
-            }
-        }
-    });
+    var div = $("#photos ul");
+    for (var i = 0; i < 10; i++) {
+        var li = '<li><a href="data/img/' + (i + 1) + '.jpg" rel="lightbox"><img alt="项目图片" src="data/img/thumb/' + (i + 1) + '.jpg" /></a></li>';
+        div.append(li);
+    }
     // START Patch: repair initialize URL with hash
     if (window.location.hash) {
         $('html,body').stop().animate({
@@ -183,7 +175,7 @@ function contact_send() {
 }
 
 var _hmt = _hmt || [];
-(function() {
+(function () {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?3ac417d9ec3cc6fae6b7d81536f831a2";
     var s = document.getElementsByTagName("script")[0];
